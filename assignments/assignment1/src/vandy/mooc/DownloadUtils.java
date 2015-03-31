@@ -58,12 +58,10 @@ public class DownloadUtils {
      * 
      * @return          the absolute path to the downloaded image file on the file system.
      */
-    public static Uri downloadImage(Context context,
-                                    Uri url) {
+    public static Uri downloadImage(Context context, Uri url) {
     	try {
             if (!isExternalStorageWritable()) {
-                Log.d(TAG,
-                      "external storage is not writable");
+                Log.d(TAG, "external storage is not writable");
                 return null;
             }
 
@@ -76,16 +74,14 @@ public class DownloadUtils {
             // If we're offline, open the image in our resources.
             if (DOWNLOAD_OFFLINE) {
                 // Get a stream from the image resource.
-                inputStream =
-                    context.getResources().openRawResource(OFFLINE_TEST_IMAGE);
+                inputStream = context.getResources().openRawResource(OFFLINE_TEST_IMAGE);
                 filename = OFFLINE_FILENAME;
                 
             // Otherwise, download the file requested by the user.
             } else {
                 // Download the contents at the URL, which should
                 // reference an image.
-                inputStream =
-                    (InputStream) new URL(url.toString()).getContent();
+                inputStream = (InputStream) new URL(url.toString()).getContent();
                 filename = url.toString();
             }
 

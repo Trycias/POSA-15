@@ -26,15 +26,22 @@ public class DownloadImageActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         // Always call super class for necessary
         // initialization/implementation.
-        // @@ TODO -- you fill in here.
-
+        // @@ TODO --> you fill in here.
+        super.onCreate(savedInstanceState);
         // Get the URL associated with the Intent data.
-        // @@ TODO -- you fill in here.
+        // @@ TODO -->? you fill in here.
+        Intent intentRecu = getIntent();
+        Uri url = intentRecu.getData();
 
         // Download the image in the background, create an Intent that
         // contains the path to the image file, and set this as the
         // result of the Activity.
-
+        
+        /* Je me demande s'il fallait le mettre là ... 
+        DownloadUtils du = new DownloadUtils();
+        Uri localUri = du.downloadImage(this, url);
+        */
+        
         // @@ TODO -- you fill in here using the Android "HaMeR"
         // concurrency framework.  Note that the finish() method
         // should be called in the UI thread, whereas the other
