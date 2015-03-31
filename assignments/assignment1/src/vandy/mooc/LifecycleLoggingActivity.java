@@ -14,7 +14,7 @@ public abstract class LifecycleLoggingActivity extends Activity {
      */
     private final String TAG = getClass().getSimpleName();
 
-    /**
+    /** 
      * Hook method called when a new instance of Activity is created.
      * One time initialization code should go here e.g. UI layout,
      * some class scope variable initialization.  if finish() is
